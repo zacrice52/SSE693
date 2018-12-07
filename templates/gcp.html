@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About GCP</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <h1>About Google Cloud Platform (GCP)</h1>
+    <h2>About GCP</h2>
+    <ul>
+	    <li>GCP is a cloud computing service provided by Google. </li>
+	    <li>It can be used to store data, develop and house web applications, and much more.</li>
+    </ul>
+
+    <h2>GCP and this web application</h2>
+    <ul style="list-style-type:circle">
+	    <li>This web application was developed using Google App Engine, which is a web development service provided by GCP. </li>
+	    <li>All of the files that make this application run on the back end are contained in a bucket in Google Cloud Storage. </li>
+	    <li>This was the first time that I developed a web application at all, and I found resources provided by GCP to be very useful. </li>
+    </ul>
+    {% endblock %}
+  </body>
+</html>

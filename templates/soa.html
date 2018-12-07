@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About SOA</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <h1>About Service Oriented Architecture (SOA)</h1>
+    <h2>Defining SOA</h2>
+    <ul>
+	    <li>Services are individual, self contained functions that are independent of external fluctuations.</li>
+	    <li>Services can ideally be reused in multiple systems with little to no changes to the service itself.</li>
+	    <li>SOA emphasizes loose coupling between services -- constructing them such that they are versatile and are capable of being reused, regardless of software or requesters involved.</li>
+    </ul>
+
+    <h2>SOA in this web application</h2>
+    <ul style="list-style-type:circle">
+             <li>In this web application, "main.py" acts as an Enterprise Service Bus (ESB) by calling upon other services.</li>
+             <li>Namely, it calls upon Flask services to render html webpages for each link, and it calls upon "foaf_parse.py" to perform the SPARQL query of the foaf.rdf file</li>
+	     <li>Flask and foaf_parse are services since they can be reused in other systems without changing their internal logic.</li>
+    </ul>
+    {% endblock %}
+  </body>
+</html>

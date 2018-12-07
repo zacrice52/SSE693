@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About RDF</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <h1>About Resource Description Framework (RDF)</h1>
+    <h2>Defining Semantic Web</h2>
+    <ul>
+	    <li>Semantic web technologies use the internet as one large database. In essence, it is a common data format and exchange protocol developed by the World Wide Web Consortium (W3C).</li>
+	    <li>Semantic web involves building ontologies, which describe features of data. </li>
+	    <li>RDF is the basis for knowledge representation for the semantic web. It builds data descriptors using a subject, object, and predicate, much like how sentences are structured in many spoken languages.</li>
+    </ul>
+
+    <h2>Semantic Web and RDF in this web application</h2>
+    <ul style="list-style-type:circle">
+	     <li>Semantic web can be leveraged in some very useful ways. In this application, a SPARQL query is performed on foaf.rdf, which contains information about me, using the foaf_parse service.</li>
+	     <li>foaf.rdf is composed using the RDF language to create a FOAF description of me. </li>
+	     <li>FOAF is an RDF based schema containing information about a person, such as their first name, last name, title, and email address. </li>
+	     <li>Through this basic example, I have seen the power of the semantic web. The possibilities of its applications are endless. </li>
+	     <li>However, in order for semantic web to work, resources have to be shared. Though the framework is ingeneous, the number of resources that utilize the technologies are limited, and the number that allow open access to their data are even fewer. </li> 
+    </ul>
+    {% endblock %}
+  </body>
+</html>

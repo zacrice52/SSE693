@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About Me</title>
+   <style>
+  form * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+  }
+  </style>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <h1>About Me</h1>
+    <p>Click on a button, and information about me will be displayed</p>
+    <p>In case you're interested, this information is retrieved using an RDF-based schema, FOAF.</p>
+  
+    <button type = "button" onclick="displayfname()">First Name</button>
+      <label id="fname" class="control-label" style="border: thin red solid; color:white">{{me.fname}}</label>
+    <br>
+    <button type = "button" onclick="displaylname()">Last Name</button>
+      <label id="lname" class="control-label" style="border: thin red solid; color:white">{{me.lname}}</label>
+    <br>
+    <button type = "button" onclick="displaynickname()"> Nick Name </button>
+      <label id="nickname" class="control-label" style="border: thin red solid; color:white">{{me.nickname}}</label>
+      <br><br>
+    <a href="{{me.email}}?&subject=Fantastic%20Project&body=You%20get%20a%20100%20on%20your%20project,%20great%20job!">Email Me</a>
+      
+    <script>
+function displayfname() {
+        var labl = "fname";
+        var text = document.getElementById(labl);
+	if(text.style.color="white")
+	{  
+	  text.style.color="black";
+        }
+}
+function displaynickname() {
+        var labl = "nickname";
+        var text = document.getElementById(labl);
+	if(text.style.color="white")
+	{  
+	  text.style.color="black";
+        }
+}
+function displaylname() {
+        var labl = "lname";
+        var text = document.getElementById(labl);
+	if(text.style.color="white")
+	{  
+	  text.style.color="black";
+        }
+}
+    </script>
+    
+  {% endblock %}
+  </body>
+</html>
